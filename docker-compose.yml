@@ -1,0 +1,6 @@
+version: '2'
+services:
+    monitoring-grafana:
+        extends:
+            file: ./grafana/grafana.yml
+            service: grafana

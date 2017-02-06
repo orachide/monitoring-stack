@@ -1,0 +1,18 @@
+version: '2'
+services:
+    grafana:
+        container_name: monitoring-grafana
+        image: orachide/grafana #https://hub.docker.com/r/orachide/grafana/
+#        environment:
+             # Download plugin on starting when using image grafana/grafana
+#            - GF_INSTALL_PLUGINS=grafana-piechart-panel,vonage-status-panel
+#        env_file:
+#            - ../commons.env
+        ports:
+            - 3000:3000
+#        volumes:
+#            - /data/monitoring-stack/grafana/config/:/etc/grafana/
+#            - /data/datasources/:/etc/grafana/datasources/
+            # map plugin folder to avoid download every time
+#            - /data/linkycom-sup/grafana/plugins/:/var/lib/grafana/plugins/
+#            - /data/grafana-dashboards/dashboards/:/var/lib/grafana/dashboards/
